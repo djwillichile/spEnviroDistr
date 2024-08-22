@@ -7,26 +7,35 @@
 createCluster(free = 1)
 }
 \arguments{
-\item{free}{Integer. Number of cores to leave free. Default is 1.}
+\item{free}{Integer. The number of CPU cores to leave free for other tasks. The default is 1.}
 }
 \value{
-A cluster object.
+A \code{cluster} object that can be used with parallel processing functions like \code{parLapply} and \code{parApply}.
 }
 \description{
-This function detects the number of cores available on the machine,
-subtracts the number of cores specified to be left free, and creates a cluster
-using the remaining cores.
+This function creates a parallel processing cluster by detecting the number of available CPU cores on the machine,
+subtracting the number of cores specified to be left free, and using the remaining cores to create the cluster.
+This can be useful for speeding up computations that can be parallelized.
 }
 \details{
-This function detects the total number of available cores on the machine, subtracts
-the number of cores specified to be left free, and creates a cluster with the remaining cores.
-On Linux systems, the cluster type is determined using the \code{snow} package's \code{getClusterOption()}.
-On other operating systems, it creates a default cluster without specifying the type.
+This function detects the total number of CPU cores available on the machine using the \code{parallel} package.
+It then subtracts the number of cores specified in the \code{free} parameter and creates a cluster using the remaining cores.
 
-Note: This function requires the \code{parallel} and \code{snow} packages to be installed.
+On Linux systems, the function will use the \code{snow} package's \code{getClusterOption()} to determine the type of cluster
+to create, ensuring compatibility with the system's parallel processing capabilities. On other operating systems,
+the function defaults to creating a basic cluster without specifying a type, which should work for most cases.
+
+Note that this function requires the \code{parallel} and \code{snow} packages to be installed and loaded.
 }
 \examples{
 \dontrun{
+# Create a cluster leaving 2 cores free for other tasks
 cl <- createCluster(free = 2)
+
+# Use the cluster for parallel processing
+# ...
+
+# Stop the cluster when done
+parallel::stopCluster(cl)
 }
 }

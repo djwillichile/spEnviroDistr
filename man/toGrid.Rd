@@ -2,33 +2,46 @@
 % Please edit documentation in R/toGrid.R
 \name{toGrid}
 \alias{toGrid}
-\title{Converts a Data Frame into a Spatial Grid Object}
+\title{Convert a Data Frame into a Spatial Grid Object}
 \usage{
 toGrid(x, coords, crs_str)
 }
 \arguments{
-\item{x}{A data frame containing the spatial data. Must include columns for coordinates.}
+\item{x}{A data frame containing the spatial data. The data frame must include columns that represent coordinates.}
 
 \item{coords}{A character vector of length 2 specifying the names of the columns
-in the data frame that represent the x and y coordinates.}
+in the data frame that represent the x and y coordinates, respectively.}
 
 \item{crs_str}{A character string or a \code{CRS} object representing the coordinate
-reference system to be assigned to the spatial object. If \code{NULL}, no CRS is assigned.}
+reference system to be assigned to the spatial object. If \code{NULL}, no CRS is assigned, and a warning is issued.}
 }
 \value{
-A spatial grid object with the specified coordinates and CRS.
+A spatial grid object (\code{SpatialGridDataFrame}) with the specified coordinates and CRS.
 }
 \description{
-This function transforms a data frame into a spatial grid object, suitable for spatial analysis.
+This function transforms a data frame into a spatial grid object, making it suitable for spatial analysis.
 The function uses the columns specified in the \code{coords} parameter to define the spatial coordinates
 in the data frame. The coordinate reference system (CRS) is specified by the \code{crs_str} parameter,
-which defines how the spatial coordinates are interpreted. The result is a grid object that can
+which defines how the spatial coordinates are interpreted. The resulting grid object can
 be used for spatial analysis in various spatial data packages and tools.
 }
 \details{
-The function assumes that the data frame contains columns with coordinate data
-specified by the \code{coords} parameter. It converts the data frame to a spatial grid object
-using the \code{sp} package functions. The CRS is set if a valid CRS string or object is provided.
+The function first checks that the input \code{x} is a data frame and that the \code{coords} parameter
+specifies two valid column names in \code{x}. The columns specified by \code{coords} are renamed to "Longitude"
+and "Latitude" for internal processing.
+
+The function then converts the data frame to a spatial object using the \code{coordinates} function
+from the \code{sp} package, sets the coordinate reference system (CRS) using \code{proj4string}, and
+finally converts the spatial points to a grid structure using \code{gridded}.
+
+If a valid \code{crs_str} is not provided, the function will proceed without assigning a CRS,
+but it will issue a warning. Assigning a CRS is important for ensuring that spatial data
+aligns correctly with other spatial datasets.
+}
+\note{
+The function assumes that the input data frame is structured such that the coordinates
+are in the same projection system. If the coordinates are in a different projection or are not projected,
+the user must provide an appropriate \code{crs_str}.
 }
 \examples{
 # Load the meuse.grid data
@@ -41,4 +54,9 @@ meuse.grid <- toGrid(meuse.grid, coords = c("x", "y"), crs_str = "+init=epsg:289
 spplot(meuse.grid, "alt")
 spplot(meuse.grid, c("dist", "soil", "ffreq", "part.a", "part.b", "elev"))
 
+}
+\references{
+Bivand, R. S., Pebesma, E., & Gómez-Rubio, V. (2013). \emph{Applied Spatial Data Analysis with R} (2nd ed.). Springer. \doi{10.1007/978-1-4614-7618-4}
+
+Pebesma, E., & Bivand, R. S. (2005). Classes and methods for spatial data in R. \emph{R News}, 5(2), 9-13.
 }

@@ -1,21 +1,37 @@
 Package: spEnviroDistr
-Title: Spatial Environmental Data Distribution Tools
-Version: 1.1.1
+Title: Tools for Spatial Distribution of Environmental Data
+Version: 1.1.1.9000
 Authors@R: 
     person("Guillermo", "Fuentes-Jaque", , "g.fuentes@renare.uchile.cl", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-7864-4899"))
-Description: This package provides tools for handling, analyzing, and visualizing spatial environmental data. It includes datasets and functions specifically tailored for geostatistical analysis and environmental modeling. The package offers the 'meuse' and 'meuse.grid' datasets, which are well-known examples for demonstrating spatial data analysis techniques.
+Description: `spEnviroDistr` is an R package designed to provide advanced tools for 
+    handling, analyzing, and visualizing spatial environmental data. The package is 
+    focused on the spatial distribution of environmental and geographic variables, 
+    facilitating geospatial analysis in research related to ecology, geography, 
+    geology, and environmental sciences. It includes functions for conducting 
+    Geographically Weighted Regression (GWR), managing parallel processing clusters, 
+    filling missing values in raster data, and converting data frames into spatial 
+    grid objects. Additionally, it provides well-known datasets like 'meuse' and 
+    'meuse.grid' for demonstrating spatial data analysis techniques.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.1
 Depends: 
-    parallel,
     R (>= 2.10),
+    parallel,
     sp (>= 1.5.0),
     spgwr (>= 0.6.35),
     terra
 Imports: 
     snow,
-    stats
+    stats,
+    pbapply
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
 LazyData: true
+URL: https://github.com/djwillichile/spEnviroDistr,
+    https://djwillichile.github.io/spEnviroDistr/
+BugReports: https://github.com/djwillichile/spEnviroDistr/issues

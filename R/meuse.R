@@ -1,36 +1,38 @@
 #' Meuse River Data Set
 #'
-#' This data set gives locations and topsoil heavy metal concentrations, along with a number of soil and landscape variables at the observation locations, collected in a flood plain of the river Meuse, near the village of Stein (NL). Heavy metal concentrations are from composite samples of an area of approximately 15 m x 15 m.
+#' This data set provides the locations and topsoil heavy metal concentrations along with a number of soil and landscape variables at observation locations. The data were collected in a floodplain of the river Meuse, near the village of Stein in the Netherlands (NL). The heavy metal concentrations were measured from composite samples taken over an area of approximately 15 m x 15 m.
 #'
 #' @docType data
 #' @usage data(meuse, package = "spEnviroDistr")
 #' @format A data frame with 155 observations on the following 15 variables:
 #' \describe{
-#'   \item{x}{A numeric vector; Easting (m) in Rijksdriehoek (RDH) (Netherlands topographical) map coordinates.}
+#'   \item{x}{A numeric vector; Easting (m) in Rijksdriehoek (RDH), the Dutch national coordinate system.}
 #'   \item{y}{A numeric vector; Northing (m) in RDH coordinates.}
-#'   \item{cadmium}{Topsoil cadmium concentration, mg kg\eqn{^{-1}} soil ("ppm"); zero cadmium values in the original data set have been shifted to 0.2 (half the lowest non-zero value).}
-#'   \item{copper}{Topsoil copper concentration, mg kg\eqn{^{-1}} soil ("ppm").}
-#'   \item{lead}{Topsoil lead concentration, mg kg\eqn{^{-1}} soil ("ppm").}
-#'   \item{zinc}{Topsoil zinc concentration, mg kg\eqn{^{-1}} soil ("ppm").}
-#'   \item{elev}{Relative elevation above local river bed, m.}
-#'   \item{alt}{Altitude above sea level, m.}
-#'   \item{dist}{Distance to the Meuse; obtained from the nearest cell in meuse.grid, which in turn was derived by a spread (spatial distance) GIS operation, horizontal precision 20 metres; then normalized to \eqn{[0,1]}.}
-#'   \item{om}{Organic matter, kg (100 kg)\eqn{^{-1}} soil (percent).}
-#'   \item{ffreq}{Flooding frequency class: "1" = once in two years; "2" = once in ten years; "3" = once in 50 years.}
-#'   \item{soil}{Soil type according to the 1:50 000 soil map of the Netherlands. "1" = Rd10A (Calcareous weakly-developed meadow soils, light sandy clay); "2" = Rd90C/VII (Non-calcareous weakly-developed meadow soils, heavy sandy clay to light clay); "3" = Bkd26/VII (Red Brick soil, fine-sandy, silty light clay).}
-#'   \item{lime}{Lime class: 0 = absent, 1 = present by field test with 5% HCl.}
-#'   \item{landuse}{Landuse class: "Aa" = Agriculture/unspecified, "Ab" = Agr/sugar beets, "Ag" = Agr/small grains, "Ah" = Agr/??, "Am" = Agr/maize, "B" = woods, "Bw" = trees in pasture, "DEN" = ??, "Fh" = tall fruit trees, "Fl" = low fruit trees, "Fw" = fruit trees in pasture, "Ga" = home gardens, "SPO" = sport field, "STA" = stable yard, "Tv" = ??, "W" = pasture.}
-#'   \item{dist.m}{Distance to river Meuse in metres, as obtained during the field survey.}
+#'   \item{cadmium}{Topsoil cadmium concentration, measured in mg/kg of soil (ppm). Zero cadmium values in the original data set have been adjusted to 0.2 ppm, which is half the lowest non-zero value.}
+#'   \item{copper}{Topsoil copper concentration, measured in mg/kg of soil (ppm).}
+#'   \item{lead}{Topsoil lead concentration, measured in mg/kg of soil (ppm).}
+#'   \item{zinc}{Topsoil zinc concentration, measured in mg/kg of soil (ppm).}
+#'   \item{elev}{Relative elevation above the local riverbed in meters.}
+#'   \item{alt}{Altitude above sea level in meters, derived from the `meuse.alt` dataset, which provides altitudes digitized from the 1:10,000 topographical map of the Netherlands.}
+#'   \item{dist}{Distance to the Meuse River, obtained from the nearest cell in the `meuse.grid` dataset, which was derived using a spatial distance GIS operation. The distance is normalized to a range of \eqn{[0,1]}.}
+#'   \item{om}{Organic matter content, measured as a percentage (kg per 100 kg of soil).}
+#'   \item{ffreq}{Flooding frequency class: "1" indicates flooding once in two years; "2" indicates flooding once in ten years; "3" indicates flooding once in 50 years.}
+#'   \item{soil}{Soil type according to the 1:50,000 soil map of the Netherlands. "1" corresponds to Rd10A (Calcareous weakly-developed meadow soils, light sandy clay); "2" corresponds to Rd90C/VII (Non-calcareous weakly-developed meadow soils, heavy sandy clay to light clay); "3" corresponds to Bkd26/VII (Red Brick soil, fine-sandy, silty light clay).}
+#'   \item{lime}{Lime presence: 0 = absent, 1 = present, as determined by a field test using 5% HCl.}
+#'   \item{landuse}{Land use classification: "Aa" = Agriculture/unspecified, "Ab" = Agriculture/sugar beets, "Ag" = Agriculture/small grains, "Ah" = Agriculture/other, "Am" = Agriculture/maize, "B" = woods, "Bw" = trees in pasture, "DEN" = other, "Fh" = tall fruit trees, "Fl" = low fruit trees, "Fw" = fruit trees in pasture, "Ga" = home gardens, "SPO" = sport field, "STA" = stable yard, "Tv" = other, "W" = pasture.}
+#'   \item{dist.m}{Distance to the Meuse River in meters, as measured during the field survey.}
 #' }
-#' @details Soil units were mapped with a minimum delineation width of 150 m, and so somewhat generalize the landscape.
-#' @note Row names refer to the original sample number.
+#' @details
+#' The soil units were mapped with a minimum delineation width of 150 m, which means that the landscape is somewhat generalized. The data provides a valuable resource for understanding the distribution of heavy metals in the topsoil of the floodplain, and is often used in geostatistical analyses and environmental modeling.
+#'
+#' @note Row names refer to the original sample numbers in the dataset.
 #' @source \url{http://www.gstat.org/}
 #' @references
-#' M G J Rikken and R P G Van Rijn, 1993. Soil pollution with heavy metals - an inquiry into spatial variation, cost of mapping and the risk evaluation of copper, cadmium, lead and zinc in the floodplains of the Meuse west of Stein, the Netherlands. Doctoraalveldwerkverslag, Dept. of Physical Geography, Utrecht University
+#' M G J Rikken and R P G Van Rijn, 1993. \emph{Soil pollution with heavy metals - an inquiry into spatial variation, cost of mapping and the risk evaluation of copper, cadmium, lead and zinc in the floodplains of the Meuse west of Stein, the Netherlands}. Doctoraalveldwerkverslag, Dept. of Physical Geography, Utrecht University.
 #'
-#' P.A. Burrough, R.A. McDonnell, 1998. Principles of Geographical Information Systems. Oxford University Press.
+#' P.A. Burrough, R.A. McDonnell, 1998. \emph{Principles of Geographical Information Systems}. Oxford University Press.
 #'
-#' Stichting voor Bodemkartering (STIBOKA), 1970. Bodemkaart van Nederland: Blad 59 Peer, Blad 60 West en 60 Oost Sittard: schaal 1:50 000. Wageningen, STIBOKA.
+#' Stichting voor Bodemkartering (STIBOKA), 1970. \emph{Bodemkaart van Nederland: Blad 59 Peer, Blad 60 West en 60 Oost Sittard: schaal 1:50 000}. Wageningen, STIBOKA.
 #'
 #' @examples
 #' data(meuse, package = "spEnviroDistr")
@@ -40,3 +42,4 @@
 #' bubble(meuse, "zinc", col = c("#00ff0088", "#00ff0088"), main = "Zinc concentrations (ppm)")
 #' spplot(meuse, c("cadmium", "zinc", "copper", "lead"))
 "meuse"
+

@@ -4,9 +4,18 @@
 \name{spEnviroDistr-package}
 \alias{spEnviroDistr}
 \alias{spEnviroDistr-package}
-\title{spEnviroDistr: Spatial Environmental Data Distribution Tools}
+\title{spEnviroDistr: Tools for Spatial Distribution of Environmental Data}
 \description{
-This package provides tools for handling, analyzing, and visualizing spatial environmental data. It includes datasets and functions specifically tailored for geostatistical analysis and environmental modeling. The package offers the 'meuse' and 'meuse.grid' datasets, which are well-known examples for demonstrating spatial data analysis techniques.
+`spEnviroDistr` is an R package designed to provide advanced tools for handling, analyzing, and visualizing spatial environmental data. The package is focused on the spatial distribution of environmental and geographic variables, facilitating geospatial analysis in research related to ecology, geography, geology, and environmental sciences. It includes functions for conducting Geographically Weighted Regression (GWR), managing parallel processing clusters, filling missing values in raster data, and converting data frames into spatial grid objects. Additionally, it provides well-known datasets like 'meuse' and 'meuse.grid' for demonstrating spatial data analysis techniques.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/djwillichile/spEnviroDistr}
+  \item \url{https://djwillichile.github.io/spEnviroDistr/}
+  \item Report bugs at \url{https://github.com/djwillichile/spEnviroDistr/issues}
+}
+
 }
 \author{
 \strong{Maintainer}: Guillermo Fuentes-Jaque \email{g.fuentes@renare.uchile.cl} (\href{https://orcid.org/0000-0002-7864-4899}{ORCID})

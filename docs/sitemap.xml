@@ -19,7 +19,13 @@
     <loc>/reference/apply.GWR.html</loc>
   </url>
   <url>
+    <loc>/reference/applyGWR.html</loc>
+  </url>
+  <url>
     <loc>/reference/createCluster.html</loc>
+  </url>
+  <url>
+    <loc>/reference/epsg.html</loc>
   </url>
   <url>
     <loc>/reference/fillNA.html</loc>
@@ -38,5 +44,8 @@
   </url>
   <url>
     <loc>/reference/toGrid.html</loc>
+  </url>
+  <url>
+    <loc>/reference/toPredictors.html</loc>
   </url>
 </urlset>
