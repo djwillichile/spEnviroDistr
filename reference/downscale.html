@@ -9,7 +9,7 @@ It ensures that all input rasters have the same CRS and extent, resamples the re
 
     <a class="navbar-brand me-2" href="../index.html">spEnviroDistr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.1.1.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.0.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -95,17 +95,37 @@ It also calculates the overlap percentage between the high- and low-resolution r
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Apply the downscale function with GWR method</span></span></span>
 <span class="r-in"><span><span class="va">result</span> <span class="op">&lt;-</span> <span class="fu">downscale</span><span class="op">(</span>response <span class="op">=</span> <span class="va">tavg</span>, pred.lr <span class="op">=</span> <span class="va">elev</span>, pred.hr <span class="op">=</span> <span class="va">dem</span>, method <span class="op">=</span> <span class="st">"gwr"</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in downscale(response = tavg, pred.lr = elev, pred.hr = dem, method = "gwr"):</span> could not find function "downscale"</span>
+<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>[expanse] unknown CRS. Results can be wrong</span>
+<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>[expanse] unknown CRS. Results can be wrong</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># View the model and predicted high-resolution raster</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">result</span><span class="op">$</span><span class="va">model</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'result' not found</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Call:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gwr(formula = formula, data = data, bandwidth = bwG, adapt = adG, </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     hatmatrix = TRUE, longlat = longlat, cl = cl, predictions = TRUE)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Kernel function: gwr.Gauss </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Adaptive quantile: 0.005952041 (about 0 of 108 data points)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Summary of GWR coefficient estimates at data points:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                    Min.    1st Qu.     Median    3rd Qu.       Max.  Global</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> X.Intercept. 13.6043186 13.8297466 13.9353450 14.0102181 14.3091637 13.8224</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> altitude     -0.0053626 -0.0048709 -0.0047733 -0.0045006 -0.0036525 -0.0045</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Number of data points: 108 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Effective number of parameters (residual: 2traceS - traceS'S): 83.43652 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Effective degrees of freedom (residual: 2traceS - traceS'S): 24.56348 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Sigma (residual: 2traceS - traceS'S): 0.007612498 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Effective number of parameters (model: traceS): 63.9723 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Effective degrees of freedom (model: traceS): 44.0277 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Sigma (model: traceS): 0.00568603 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Sigma (ML): 0.003630449 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> AICc (GWR p. 61, eq 2.33; p. 96, eq. 4.21): -573.1605 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> AIC (GWR p. 96, eq. 4.22): -843.1112 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Residual sum of squares: 0.001423457 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Quasi-global R2: 0.9999733 </span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span>mfrow<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">1</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rspatial.github.io/terra/reference/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">tavg</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rspatial.github.io/terra/reference/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">result</span><span class="op">$</span><span class="va">result</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in h(simpleError(msg, call)):</span> error in evaluating the argument 'x' in selecting a method for function 'plot': object 'result' not found</span>
-<span class="r-in"><span></span></span>
 <span class="r-plt img"><img src="downscale-1.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

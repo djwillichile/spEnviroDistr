@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">spEnviroDistr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.1.1.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.0.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,11 +67,11 @@
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># Convert EPSG code 4326 to PROJ.4 string</span></span></span>
 <span class="r-in"><span><span class="fu">epsg</span><span class="op">(</span><span class="fl">4326</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "+init=epsg:4326"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "+proj=longlat +datum=WGS84 +no_defs"</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Convert EPSG code 28992 (RD New / Amersfoort)</span></span></span>
 <span class="r-in"><span><span class="fu">epsg</span><span class="op">(</span><span class="fl">28992</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "+init=epsg:28992"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "+proj=sterea +lat_0=52.1561605555556 +lon_0=5.38763888888889 +k=0.9999079 +x_0=155000 +y_0=463000 +ellps=bessel +units=m +no_defs"</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Handling an invalid EPSG code (this will return an error)</span></span></span>
 <span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>

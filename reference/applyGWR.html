@@ -9,7 +9,7 @@ GWR is a local form of linear regression used to model spatially varying relatio
 
     <a class="navbar-brand me-2" href="../index.html">spEnviroDistr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.1.1.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.0.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -116,6 +116,7 @@ nearby points more heavily based on a specified bandwidth.</p>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">meuse.grid</span>, package <span class="op">=</span> <span class="st">"spEnviroDistr"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://edzer.github.io/sp/reference/coordinates.html" class="external-link">coordinates</a></span><span class="op">(</span><span class="va">meuse.grid</span><span class="op">)</span> <span class="op">=</span> <span class="op">~</span><span class="va">x</span><span class="op">+</span><span class="va">y</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://edzer.github.io/sp/reference/is.projected.html" class="external-link">proj4string</a></span><span class="op">(</span><span class="va">meuse.grid</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://edzer.github.io/sp/reference/CRS-class.html" class="external-link">CRS</a></span><span class="op">(</span><span class="st">"+init=epsg:28992"</span><span class="op">)</span></span></span>
+<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>GDAL Message 1: +init=epsg:XXXX syntax is deprecated. It might return a CRS with a non-EPSG compliant axis order.</span>
 <span class="r-in"><span><span class="fu"><a href="https://edzer.github.io/sp/reference/gridded-methods.html" class="external-link">gridded</a></span><span class="op">(</span><span class="va">meuse.grid</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="cn">TRUE</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">meuse</span>, package <span class="op">=</span> <span class="st">"spEnviroDistr"</span><span class="op">)</span></span></span>
