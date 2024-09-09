@@ -1,9 +1,12 @@
 Package: spEnviroDistr
 Title: Tools for Spatial Distribution of Environmental Data
-Version: 2.0.0
-Authors@R: 
+Version: 2.1.0
+Authors@R: c( 
     person("Guillermo", "Fuentes-Jaque", , "g.fuentes@renare.uchile.cl", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0002-7864-4899"))
+           comment = c(ORCID = "0000-0002-7864-4899")),
+    person("Luis", "Morales-Salinas", , "lmorales@uchile.cl", role = c("ths", "aut"),
+           comment = "Thesis advisor and long-term mentor")
+           )
 Description: `spEnviroDistr` is an R package designed to provide advanced tools for 
     handling, analyzing, and visualizing spatial environmental data. The package is 
     focused on the spatial distribution of environmental and geographic variables, 

@@ -22,5 +22,10 @@ Useful links:
 \author{
 \strong{Maintainer}: Guillermo Fuentes-Jaque \email{g.fuentes@renare.uchile.cl} (\href{https://orcid.org/0000-0002-7864-4899}{ORCID})
 
+Authors:
+\itemize{
+  \item Luis Morales-Salinas \email{lmorales@uchile.cl} (Thesis advisor and long-term mentor) [thesis advisor]
+}
+
 }
 \keyword{internal}

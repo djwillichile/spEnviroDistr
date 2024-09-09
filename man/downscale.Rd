@@ -49,7 +49,6 @@ result <- downscale(response = tavg, pred.lr = elev, pred.hr = dem, method = "gw
 
 # View the model and predicted high-resolution raster
 print(result$model)
-par(mfrow=c(2,1))
 plot(tavg)
 plot(result$result)
 
