@@ -1,51 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/404.html</loc>
+    <loc>https://djwillichile.github.io/spEnviroDistr/404.html</loc>
   </url>
   <url>
-    <loc>/authors.html</loc>
+    <loc>https://djwillichile.github.io/spEnviroDistr/authors.html</loc>
   </url>
   <url>
-    <loc>/index.html</loc>
+    <loc>https://djwillichile.github.io/spEnviroDistr/index.html</loc>
   </url>
   <url>
-    <loc>/LICENSE-text.html</loc>
+    <loc>https://djwillichile.github.io/spEnviroDistr/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>/LICENSE.html</loc>
+    <loc>https://djwillichile.github.io/spEnviroDistr/LICENSE.html</loc>
   </url>
   <url>
-    <loc>/reference/apply.GWR.html</loc>
+    <loc>https://djwillichile.github.io/spEnviroDistr/reference/apply.GWR.html</loc>
   </url>
   <url>
-    <loc>/reference/applyGWR.html</loc>
+    <loc>https://djwillichile.github.io/spEnviroDistr/reference/applyGWR.html</loc>
   </url>
   <url>
-    <loc>/reference/createCluster.html</loc>
+    <loc>https://djwillichile.github.io/spEnviroDistr/reference/createCluster.html</loc>
   </url>
   <url>
-    <loc>/reference/epsg.html</loc>
+    <loc>https://djwillichile.github.io/spEnviroDistr/reference/downscale.html</loc>
   </url>
   <url>
-    <loc>/reference/fillNA.html</loc>
+    <loc>https://djwillichile.github.io/spEnviroDistr/reference/epsg.html</loc>
   </url>
   <url>
-    <loc>/reference/index.html</loc>
+    <loc>https://djwillichile.github.io/spEnviroDistr/reference/fillNA.html</loc>
   </url>
   <url>
-    <loc>/reference/meuse.grid.html</loc>
+    <loc>https://djwillichile.github.io/spEnviroDistr/reference/index.html</loc>
   </url>
   <url>
-    <loc>/reference/meuse.html</loc>
+    <loc>https://djwillichile.github.io/spEnviroDistr/reference/meuse.grid.html</loc>
   </url>
   <url>
-    <loc>/reference/spEnviroDistr-package.html</loc>
+    <loc>https://djwillichile.github.io/spEnviroDistr/reference/meuse.html</loc>
   </url>
   <url>
-    <loc>/reference/toGrid.html</loc>
+    <loc>https://djwillichile.github.io/spEnviroDistr/reference/spData.html</loc>
   </url>
   <url>
-    <loc>/reference/toPredictors.html</loc>
+    <loc>https://djwillichile.github.io/spEnviroDistr/reference/spEnviroDistr-package.html</loc>
+  </url>
+  <url>
+    <loc>https://djwillichile.github.io/spEnviroDistr/reference/toGrid.html</loc>
+  </url>
+  <url>
+    <loc>https://djwillichile.github.io/spEnviroDistr/reference/toPredictors.html</loc>
+  </url>
+  <url>
+    <loc>https://djwillichile.github.io/spEnviroDistr/reference/toSpatData.html</loc>
   </url>
 </urlset>
