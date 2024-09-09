@@ -6,6 +6,8 @@
 \alias{spEnviroDistr-package}
 \title{spEnviroDistr: Tools for Spatial Distribution of Environmental Data}
 \description{
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
 `spEnviroDistr` is an R package designed to provide advanced tools for handling, analyzing, and visualizing spatial environmental data. The package is focused on the spatial distribution of environmental and geographic variables, facilitating geospatial analysis in research related to ecology, geography, geology, and environmental sciences. It includes functions for conducting Geographically Weighted Regression (GWR), managing parallel processing clusters, filling missing values in raster data, and converting data frames into spatial grid objects. Additionally, it provides well-known datasets like 'meuse' and 'meuse.grid' for demonstrating spatial data analysis techniques.
 }
 \seealso{
