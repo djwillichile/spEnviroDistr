@@ -1,6 +1,6 @@
 Package: spEnviroDistr
 Title: Tools for Spatial Distribution of Environmental Data
-Version: 1.1.1.9000
+Version: 2.0.0
 Authors@R: 
     person("Guillermo", "Fuentes-Jaque", , "g.fuentes@renare.uchile.cl", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-7864-4899"))
@@ -26,7 +26,8 @@ Depends:
 Imports: 
     snow,
     stats,
-    pbapply
+    pbapply,
+    tidyterra
 Suggests: 
     knitr,
     rmarkdown
