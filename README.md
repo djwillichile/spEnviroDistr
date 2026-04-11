@@ -46,7 +46,7 @@ summary(meuse)
 # Apply Geographically Weighted Regression (GWR)
 cl <- createCluster(free = 2) # Create a parallel processing cluster with 2 free cores
 # Apply GWR to model the relationship between copper concentration and altitude, distance, and elevation
-result <- applyGWR(log(copper) ~ alt + dist + elev, data = meuse, longlat = FALSE, cl = cl)
+result <- applyGWR(log(copper) ~ elev + dist, data = meuse, longlat = FALSE, cl = cl)
 stopCluster(cl) # Stop the parallel processing cluster to free resources
 
 # View GWR results
@@ -62,7 +62,7 @@ spplot(meuse.grid, "alt") # Plot the altitude variable on the grid
 
 # Apply GWR on prediction grid and model fitting points
 cl <- createCluster(free = 2) # Create a new parallel processing cluster
-result <- applyGWR(log(copper) ~ alt + dist + elev, data = meuse,longlat = FALSE,
+result <- applyGWR(log(copper) ~ elev + dist, data = meuse,longlat = FALSE,
 cl = cl, fit.points = meuse.grid)
 stopCluster(cl)
 
@@ -80,12 +80,19 @@ spplot(result$output$SDF, "pred")
 - **`toGrid`**: Converts a data frame into a Spatial Grid object.
 - **`toPredictors`**: Resamples and converts a list of raster layers into a predictors object.
 - **`toSpatData`**: Converts a `SpatRaster` object to a spatial points data frame for spatial analysis.
+- **`epsg`**: Converts an EPSG code to a CRS string for use in spatial coordinate reference system definitions.
 
 ## 🙏 Acknowledgements
 
-I would like to extend my heartfelt gratitude to **Luis Morales-Salinas**, whose mentorship has been pivotal not only in the creation of this package, but also throughout my educational and professional development. His expertise and guidance were instrumental in shaping the methods and approaches used in `spEnviroDistr`. The package, and much of my growth as a professional, would not have been possible without his unwavering support and invaluable insights.
-
-I would also like to thank **Julián Cabezas-Peña**, who guided me through my first steps in R and helped me discover the beauty of this language. His early encouragement sparked my passion for R programming and spatial data analysis.
+The spEnviroDistr package was developed within the research framework of the
+Centro de Investigación y Transferencia en Riego y Agroclimatología (CITRA)
+at Universidad de Talca. The functional design of the package emerged from
+collaborative applied research coordinated by Prof. Samuel Ortega-Farías,
+whose scientific direction, institutional support, and project funding were
+essential to this work. The methodological and statistical foundations of the
+package benefited greatly from the academic supervision and mentorship of
+Prof. Luis Morales-Salinas (Universidad de Chile), whose guidance shaped the
+analytical approach throughout the development process.
 
 ## 🗃 Maintainers and License
 
