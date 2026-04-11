@@ -84,15 +84,24 @@ spplot(result$output$SDF, "pred")
 
 ## 🙏 Acknowledgements
 
-The spEnviroDistr package was developed within the research framework of the
+The `spEnviroDistr` package was developed within the research framework of the
 Centro de Investigación y Transferencia en Riego y Agroclimatología (CITRA)
-at Universidad de Talca. The functional design of the package emerged from
-collaborative applied research coordinated by Prof. Samuel Ortega-Farías,
-whose scientific direction, institutional support, and project funding were
-essential to this work. The methodological and statistical foundations of the
-package benefited greatly from the academic supervision and mentorship of
-Prof. Luis Morales-Salinas (Universidad de Chile), whose guidance shaped the
-analytical approach throughout the development process.
+at Universidad de Talca. Its functional design emerged from collaborative
+applied research coordinated by Prof. Samuel Ortega-Farías, whose scientific
+direction, institutional support, and project funding were essential to this
+work.
+
+I would like to extend my heartfelt gratitude to **Luis Morales-Salinas**,
+whose mentorship has been pivotal not only in the creation of this package, but
+also throughout my educational and professional development. His expertise and
+guidance were instrumental in shaping the methodological and statistical
+foundations, as well as the analytical approaches, used in `spEnviroDistr`.
+The package, and much of my growth as a professional, would not have been
+possible without his unwavering support and invaluable insights.
+
+I would also like to thank **Julián Cabezas-Peña**, who guided me through my
+first steps in R and helped me discover the beauty of this language. His early
+encouragement sparked my passion for R programming and spatial data analysis.
 
 ## 🗃 Maintainers and License
 
