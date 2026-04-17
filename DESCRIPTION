@@ -43,6 +43,5 @@ Suggests:
     rmarkdown
 VignetteBuilder: knitr
 LazyData: true
-URL: https://github.com/djwillichile/spEnviroDistr,
-    https://djwillichile.github.io/spEnviroDistr/
+URL: https://github.com/djwillichile/spEnviroDistr, https://djwillichile.github.io/spEnviroDistr/
 BugReports: https://github.com/djwillichile/spEnviroDistr/issues
