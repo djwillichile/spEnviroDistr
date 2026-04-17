@@ -7,7 +7,7 @@ Authors@R: c(
     person("Luis", "Morales-Salinas", , "lmorales@uchile.cl", role = c("ths", "aut"),
            comment = "Thesis advisor, methodological supervision and academic mentorship"),
     person("Samuel", "Ortega-Farías", , "s.ortega@utalca.cl", role = c("fnd", "aut"),
-         comment "Project coordination, functional design and funding")
+           comment = "Project coordination, functional design and funding")
            )
 Description: `spEnviroDistr` is an R package designed to provide advanced tools for 
     handling, analyzing, and visualizing spatial environmental data. The package is 
