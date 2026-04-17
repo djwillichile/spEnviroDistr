@@ -27,13 +27,13 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.1
-Depends:
+Depends: 
     R (>= 2.10),
     parallel,
     sp (>= 1.5.0),
     spgwr (>= 0.6.35),
     terra
-Imports:
+Imports: 
     snow,
     stats,
     pbapply,
@@ -43,5 +43,6 @@ Suggests:
     rmarkdown
 VignetteBuilder: knitr
 LazyData: true
-URL: https://github.com/djwillichile/spEnviroDistr, https://djwillichile.github.io/spEnviroDistr/
+URL: https://github.com/djwillichile/spEnviroDistr,
+    https://djwillichile.github.io/spEnviroDistr/
 BugReports: https://github.com/djwillichile/spEnviroDistr/issues
